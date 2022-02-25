@@ -1,5 +1,7 @@
 (library
   (name langlib))
 
+(ocamllex lexer)
+
 (menhir
   (modules parser))
