@@ -10,8 +10,7 @@ open Ast
 %token EOF
 %token <int> INT
 %token PLUS
-
-%left PLUS
+%token LET
 
 %start <Ast.t> f
 
@@ -24,3 +23,4 @@ expr:
   | INT { Int $1 }
   | VAR { Var $1 }
   | LPAREN PLUS expr expr RPAREN { Add ($3, $4) }
+  | LPAREN LET LBRACK VAR expr RBRACK expr RPAREN { Let($4, $5, $7)}

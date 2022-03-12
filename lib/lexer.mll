@@ -16,6 +16,7 @@ rule f = parse
   | "[" { LBRACK }
   | "]" { RBRACK }
   | "+" { PLUS }
+  | "let" { LET }
   | number as n { INT (int_of_string n ) }
   | var as s { VAR s }
   | eof { EOF }
