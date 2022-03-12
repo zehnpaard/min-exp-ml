@@ -10,11 +10,11 @@ open Ast
 
 %left PLUS
 
-%start <Ast.t> prog
+%start <Ast.t> f
 
 %%
 
-prog:
+f:
   | expr EOF { $1 }
 
 expr:

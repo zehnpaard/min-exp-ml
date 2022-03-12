@@ -1,0 +1,3 @@
+(executable
+  (name langmain)
+  (libraries langlib))
